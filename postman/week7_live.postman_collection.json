@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "74e89e4c-2168-480c-9f6e-3dabed780a2c",
+		"name": "week7_live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20102154"
+	},
+	"item": [
+		{
+			"name": "使用者登入",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ3YjM2ODJiMGMxYmVlMGVkY2UwMCIsIm5hbWUiOiJBZGEiLCJpYXQiOjE2NTQ5NDY2MTUsImV4cCI6MTY1NTU1MTQxNX0.5Lig7aXwL_442N_woiZ_HTng4_AthT3JWiVT-EWRJ6A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"Ada@gmail.com\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://week7-01.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"week7-01",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "使用者註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Ada\",\n    \"email\":\"Ada@gmail.com\",\n    \"confirmPassword\":\"12345678\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://week7-01.herokuapp.com/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"week7-01",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "圖片上傳到imgUr",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTQ3YjM2ODJiMGMxYmVlMGVkY2UwMCIsIm5hbWUiOiJBZGEiLCJpYXQiOjE2NTQ5NDY2NTEsImV4cCI6MTY1NTU1MTQ1MX0.8UxeP6FkC4OQ7ll6q0zChboLY9b3yDuwsYc-7yOiIb8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/huangxiaopei/Downloads/160202669350.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://week7-01.herokuapp.com/uploadImg",
+					"protocol": "https",
+					"host": [
+						"week7-01",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"uploadImg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
